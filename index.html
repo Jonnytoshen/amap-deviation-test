@@ -20,8 +20,13 @@
         center: [116.397428, 39.90923]
     });
 
-
-googleLayer.setMap(map);
+    googleLayer = new AMap.TileLayer({
+        zIndex:2,
+        getTileUrl: function(x,y,z){
+            return 'http://mt1.google.cn/vt/lyrs=m@142&hl=zh-CN&gl=cn&x='+ x +'&y='+ y +'&z='+ z +'&s=Galil';
+        }
+    });
+    googleLayer.setMap(map);
 
 </script>
 </body>
