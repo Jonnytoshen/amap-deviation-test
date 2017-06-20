@@ -22,11 +22,19 @@
 
     googleLayer = new AMap.TileLayer({
         zIndex:2,
-        getTileUrl: function(x,y,z){
-            return 'http://mt1.google.cn/vt/lyrs=m@142&hl=zh-CN&gl=cn&x='+ x +'&y='+ y +'&z='+ z +'&s=Galil';
-        }
+        getTileUrl: 'http://t3.tianditu.com/DataServer?T=img_w&x=[x]&y=[y]&l=[z]'
+        // getTileUrl: function(x,y,z){
+        //     return 'http://mt1.google.cn/vt/lyrs=s@142&hl=zh-CN&gl=cn&x='+ x +'&y='+ y +'&z='+ z +'&s=Galil';
+        // }
     });
     googleLayer.setMap(map);
+
+
+    marker = new AMap.Marker({
+        position: [116.33167971621802, 39.99154084210781],
+        title: 'abc'
+    });
+    marker.setMap(map);
 
 </script>
 </body>
